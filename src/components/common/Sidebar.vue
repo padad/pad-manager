@@ -146,6 +146,21 @@ export default {
                     ]
                 },
                 {
+                    icon: 'el-icon-lx-warn',
+                    index: '8',
+                    title: '进件系统',
+                    subs: [
+                        {
+                            index: 'test',
+                            title: '测试'
+                        },
+                        {
+                            index: '404',
+                            title: '404页面'
+                        }
+                    ]
+                },
+                {
                     icon: 'el-icon-lx-redpacket_fill',
                     index: '/donate',
                     title: '支持作者'
