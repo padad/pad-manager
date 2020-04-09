@@ -3,6 +3,7 @@ import axios from 'axios'
 import qs from 'qs'
 
 import router from '@/router'
+import * as UrlUtil from './UrlUtil'
 
 
 
@@ -116,11 +117,12 @@ export function post(url, params) {
       'Content-Type':'application/json'
     }
   }
+  let REQUESTURL =  UrlUtil.initUrl(url)
   
   return new Promise((resolve, reject) => {
     axios
       .post(
-        url,
+        REQUESTURL,
         params,
         config
         

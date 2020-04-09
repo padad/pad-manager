@@ -12,7 +12,7 @@ export function initUrl(url) {
         return releaseUrl + url
     }
     else{
-        return devUrl + url
+        return '/apis' + url
     }
 
 
