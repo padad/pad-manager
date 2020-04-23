@@ -37,7 +37,7 @@ export default {
         return {
             param: {
                 username: 'admin',
-                password: '123123',
+                password: 'admin',
             },
             rules: {
                 username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
@@ -55,23 +55,23 @@ export default {
                         // rows:'10'
                     }).then(res=>{
 
-                        console.log(JSON.stringify(res))
+                        //console.log(JSON.stringify(res))
                         if(res.systemMap.status=='1'){
 
-                            this.$message.success(JSON.stringify(res.resultList))
+                            //this.$message.success(JSON.stringify(res.resultList))
 
                         }
                         else{
-                            this.$message.error(res.systemMap.message)
+                            //this.$message.error(res.systemMap.message)
                         }
                     }).catch(error=>{
 
                     })
 
-                    //this.param.username = UrlUtil.initUrl('/jojo')
-                    // this.$message.success('登录成功');
-                    // localStorage.setItem('ms_username', this.param.username);
-                    // this.$router.push('/');
+                    
+                    this.$message.success('登录成功');
+                    localStorage.setItem('ms_username', this.param.username);
+                    this.$router.push('/');
                 } else {
                     this.$message.error('请输入账号和密码');
                     console.log('error submit!!');

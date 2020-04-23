@@ -9,6 +9,10 @@ import 'element-ui/lib/theme-chalk/index.css'; // 默认主题
 import './assets/css/icon.css';
 import './components/common/directives';
 import 'babel-polyfill';
+import Antd from 'ant-design-vue'// 引入Ant Design Vue组件
+import 'ant-design-vue/dist/antd.css' // 引入Ant Design Vue样式
+Vue.use(Antd) //挂载到vue中
+
 
 Vue.config.productionTip = false;
 Vue.use(VueI18n);
@@ -24,6 +28,7 @@ const i18n = new VueI18n({
 router.beforeEach((to, from, next) => {
     document.title = `${to.meta.title} | vue-manage-system`;
     const role = localStorage.getItem('ms_username');
+    localStorage.setItem
     if (!role && to.path !== '/login') {
         next('/login');
     } else if (to.meta.permission) {
